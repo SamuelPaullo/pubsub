@@ -1,6 +1,6 @@
 # PubSub Java Library
 
-Sistema de publicação/assinatura (Pub/Sub) desacoplado e extensível para aplicações Java, baseado em EventBus.
+Sistema de publicação/assinatura (Pub/Sub) de eventos assincronos desacoplado e extensível para aplicações Java, baseado em EventBus.
 
 ## ✨ Destaques
 
@@ -31,7 +31,7 @@ public class UserCreatedEvent extends EventMessage {
 ### 2. Criando um Assinante
 ```java
 public class UserEventListener implements EventSubscriber {
-    
+
     @Subscribe
     public void onUserCreated(UserCreatedEvent event) {
         System.out.println("Novo usuário: " + event.getUsername());
